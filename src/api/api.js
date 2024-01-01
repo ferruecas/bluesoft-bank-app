@@ -13,9 +13,10 @@ export const consultarSaldoApi = async (cuentaId) => {
 };
 
 // Función para obtener movimientos recientes
-export const obtenerMovimientosApi = async (cuentaId) => {
+export const obtenerMovimientosApi = async (cuentaId,cantidad) => {
   try {
-    const response = await fetch(`${BASE_URL}/movimientos/${cuentaId}`);
+    debugger
+    const response = await fetch(`${BASE_URL}/Transaccion/${cuentaId}/${cantidad}`);
     const data = await response.json();
     return data; // Ajusta según la estructura de tu respuesta
   } catch (error) {
