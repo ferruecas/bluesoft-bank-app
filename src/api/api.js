@@ -25,4 +25,6 @@ export const obtenerMovimientosApi = async (cuentaId,cantidad) => {
   }
 };
 
+
+
 // Otras funciones para realizar consignaciones, retiros, etc.

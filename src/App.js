@@ -7,6 +7,8 @@ import ContactPage from './pages/ContactPage';
 import ConsultarSaldo from './components/ConsultarSaldo';
 import './App.css'; // Importar el archivo CSS
 import MovimientosRecientes from './components/MovimientosRecientes';
+import Consignacion from './components/Consignacion';
+import Retiro from './components/Retiro';
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/saldos" element={<ConsultarSaldo />} />
         <Route path="/movimientos" element={<MovimientosRecientes />} />
+        <Route path="/Consignacion" element={<Consignacion />} />
+        <Route path="/Retiro" element={<Retiro />} />        
       </Routes>
     </Router>
   );

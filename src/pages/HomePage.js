@@ -8,8 +8,10 @@ const HomePage = () => {
       <h2>Bienvenido a Bluesoft Bank</h2>
       <Link className="button-link" to="/saldos">Consultar Saldo</Link>
       <Link className="button-link" to="/movimientos">Movimientos Recientes</Link>
-      <Link className="button-link" to="/consignacion">Realizar Consignación</Link>
-      <Link className="button-link" to="/retiro">Realizar Retiro</Link></div>
+      <Link className="button-link" to="/Consignacion">Realizar Consignación</Link>
+      <Link className="button-link" to="/retiro">Realizar Retiro</Link>
+      <Link className="button-link" to="/extractos">Generar Extractos</Link>
+      </div>
   );
 };
 
