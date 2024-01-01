@@ -1,6 +1,4 @@
-// components/ConsultarSaldo.js
 import React, { useState } from 'react';
-// import swal from 'react-sweetalert2';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { consultarSaldoApi } from '../api/api';
@@ -32,10 +30,8 @@ const ConsultarSaldo = () => {
                 text: saldo.data,
               });
         }
-        // Mostrar SweetAlert con el saldo
-       
+  
       } catch (error) {
-        // Manejar errores, por ejemplo, mostrar SweetAlert de error
         Swal.fire({
           icon: 'error',
           title: 'Error',

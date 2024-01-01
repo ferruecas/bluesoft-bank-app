@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { obtenerMovimientosApi } from '../api/api';
 import { Table } from 'react-bootstrap';
-import '../App.css'; // Ajusta la ruta según la ubicación de tu archivo de estilos
+import '../App.css'; 
 import styled from 'styled-components';
 
 const ConsultarMovimientosRecientes = () => {

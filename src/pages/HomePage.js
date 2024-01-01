@@ -11,6 +11,7 @@ const HomePage = () => {
       <Link className="button-link" to="/Consignacion">Realizar Consignación</Link>
       <Link className="button-link" to="/retiro">Realizar Retiro</Link>
       <Link className="button-link" to="/extractos">Generar Extractos</Link>
+      <Link className="button-link" to="/reportes">Generar Reportes</Link>
       </div>
   );
 };

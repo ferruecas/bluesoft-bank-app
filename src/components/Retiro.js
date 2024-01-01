@@ -69,8 +69,6 @@ const Retiro = () => {
 
       <label>Monto:</label>
       <input type="text" value={monto} onChange={(e) => setMonto(e.target.value)} />
-
-      {/* Agregamos el selector de ciudades */}
       <label>Ciudad:</label>
       <select value={ciudadId} onChange={(e) => setCiudadId(e.target.value)}>
         <option value="">Seleccione una ciudad</option>
