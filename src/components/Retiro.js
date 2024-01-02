@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
+import { Container } from 'react-bootstrap';
 
 const Retiro = () => {
   const [cuenta, setCuenta] = useState('');
@@ -62,25 +63,27 @@ const Retiro = () => {
   };
 
   return (
-    <div>
-      <h2>Realizar Retiro</h2>
-      <label>Número de Cuenta:</label>
-      <input type="text" value={cuenta} onChange={(e) => setCuenta(e.target.value)} />
+    <Container>
+      <div>
+        <h2>Realizar Retiro</h2>
+        <label>Número de Cuenta:</label>
+        <input type="text" value={cuenta} onChange={(e) => setCuenta(e.target.value)} />
 
-      <label>Monto:</label>
-      <input type="text" value={monto} onChange={(e) => setMonto(e.target.value)} />
-      <label>Ciudad:</label>
-      <select value={ciudadId} onChange={(e) => setCiudadId(e.target.value)}>
-        <option value="">Seleccione una ciudad</option>
-        {ciudades.map((ciudad) => (
-          <option key={ciudad.ciudadId} value={ciudad.ciudadId}>
-            {ciudad.nombre}
-          </option>
-        ))}
-      </select>
+        <label>Monto:</label>
+        <input type="text" value={monto} onChange={(e) => setMonto(e.target.value)} />
+        <label>Ciudad:</label>
+        <select value={ciudadId} onChange={(e) => setCiudadId(e.target.value)}>
+          <option value="">Seleccione una ciudad</option>
+          {ciudades.map((ciudad) => (
+            <option key={ciudad.ciudadId} value={ciudad.ciudadId}>
+              {ciudad.nombre}
+            </option>
+          ))}
+        </select>
 
-      <button onClick={handleRetiro}>Realizar Retiro</button>
-    </div>
+        <button onClick={handleRetiro}>Realizar Retiro</button>
+      </div>
+    </Container>
   );
 };
 

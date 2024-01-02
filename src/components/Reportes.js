@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { Container } from 'react-bootstrap';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const Reportes = () => {
   const [mes, setMes] = useState('');
-  
+
   const handleGenerarReportes = async () => {
     try {
       const response = await fetch(`https://localhost:7192/api/Transaccion/GetTransacciones`);
@@ -66,7 +67,7 @@ const Reportes = () => {
 
         const documentDefinition = {
           content: [
-            { text: 'Transacciones en el mes '+mes, style: 'header' },
+            { text: 'Transacciones en el mes ' + mes, style: 'header' },
             { text: `Fecha: ${new Date()}`, style: 'subheader' },
             { text: '\n\n' },
             {
@@ -79,7 +80,7 @@ const Reportes = () => {
                     t.clienteId || '',
                     t.nombre || '',
                     t.numeroTransacciones || 0,
-                 
+
                   ]),
                 ],
               },
@@ -105,15 +106,19 @@ const Reportes = () => {
   };
 
   return (
-    <div>
+  <Container>
+    <div >
       <h2>Reportes</h2>
       <button onClick={handleGenerarReportes}>Reportes 1 Millón</button>
-      
-      <label>Mes:</label>
-      <input type="number" value={mes} onChange={(e) => setMes(e.target.value)} />
+
+      <div></div>
+
+      <label >Mes:</label>
+      <input value={mes} onChange={(e) => setMes(e.target.value)} />
 
       <button onClick={handleListadoClientes}>Listado de Clientes</button>
     </div>
+    </Container>
   );
 };
 

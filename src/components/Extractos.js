@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
-
+import { Container } from 'react-bootstrap';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const Extractos = () => {
@@ -33,9 +33,9 @@ const Extractos = () => {
                 body: [
                   ['Tipo', 'Monto', 'Fecha'],
                   ...transacciones.data.map((t) => [
-                    t.tipo || '', 
-                    t.monto || '', 
-                    t.fechaTransaccion || '', 
+                    t.tipo || '',
+                    t.monto || '',
+                    t.fechaTransaccion || '',
                   ]),
                 ],
               },
@@ -58,16 +58,18 @@ const Extractos = () => {
   };
 
   return (
-    <div>
-      <h2>Generar Extracto</h2>
-      <label>Número de Cuenta:</label>
-      <input type="text" value={cuentaId} onChange={(e) => setCuentaId(e.target.value)} />
+    <Container>
+      <div>
+        <h2>Generar Extracto</h2>
+        <label>Número de Cuenta:</label>
+        <input type="text" value={cuentaId} onChange={(e) => setCuentaId(e.target.value)} />
 
-      <label>Fecha (MM/YYYY):</label>
-      <input type="text" placeholder="MM/YYYY" value={fecha} onChange={(e) => setFecha(e.target.value)} />
+        <label>Fecha (MM/YYYY):</label>
+        <input type="text" placeholder="MM/YYYY" value={fecha} onChange={(e) => setFecha(e.target.value)} />
 
-      <button onClick={handleGenerarExtracto}>Generar Extracto</button>
-    </div>
+        <button onClick={handleGenerarExtracto}>Generar Extracto</button>
+      </div>
+    </Container>
   );
 };
 

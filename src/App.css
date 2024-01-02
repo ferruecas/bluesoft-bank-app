@@ -1,63 +1,38 @@
-/* App.css */
-
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #a2cf6e; /* Cambiar a un color más vivo */
+  background-color: #a2cf6e;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container {
-  max-width: 600px; /* Reducir el ancho máximo para centrar mejor en pantallas más grandes */
+.home-page {
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #fff; /* Fondo blanco para resaltar el contenido */
-  border-radius: 8px; /* Bordes redondeados para dar un aspecto más suave */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar el contenedor */
-}
-
-/* Estilos generales para TextBox */
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
-/* Estilos generales para Botones */
-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* Estilos generales para Contenedores */
-.card {
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.navigation-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation-links li {
+  margin-bottom: 10px;
+}
+
 .button-link {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  margin: 5px;
+  margin-bottom: 0px;
   border-radius: 3px;
   background-color: #4caf50;
   color: #fff;
@@ -67,15 +42,73 @@ button:hover {
 .button-link:hover {
   background-color: #45a049;
 }
-.Table {
-  font-size: 14px;
+
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.Table thead th {
-  background-color: #007bff;
-  color: white;
+.form-group {
+  margin-bottom: 15px;
+}
+h2{
+  color: chocolate  
+
+}
+.consultar-saldo-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.input-container {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #45a049;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.Table tbody tr:hover {
-  background-color: #f5f5f5;
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-top: 5px;
 }

@@ -1,18 +1,24 @@
-// pages/HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 const HomePage = () => {
   return (
-    <div className="home-page"> {/* Asignar la clase específica */}
-      <h2>Bienvenido a Bluesoft Bank</h2>
-      <Link className="button-link" to="/saldos">Consultar Saldo</Link>
-      <Link className="button-link" to="/movimientos">Movimientos Recientes</Link>
-      <Link className="button-link" to="/Consignacion">Realizar Consignación</Link>
-      <Link className="button-link" to="/retiro">Realizar Retiro</Link>
-      <Link className="button-link" to="/extractos">Generar Extractos</Link>
-      <Link className="button-link" to="/reportes">Generar Reportes</Link>
+    <Container>
+      <div className="home-page">
+        <h2>Bienvenido a Bluesoft Bank</h2>
+        <nav className="navigation-links">
+          <ul>
+            <li><Link className="button-link" to="/saldos">Consultar Saldo</Link></li>
+            <li><Link className="button-link" to="/movimientos">Movimientos Recientes</Link></li>
+            <li><Link className="button-link" to="/Consignacion">Realizar Consignación</Link></li>
+            <li><Link className="button-link" to="/retiro">Realizar Retiro</Link></li>
+            <li><Link className="button-link" to="/extractos">Generar Extractos</Link></li>
+            <li><Link className="button-link" to="/reportes">Generar Reportes</Link></li>
+          </ul>
+        </nav>
       </div>
+    </Container>
   );
 };
 

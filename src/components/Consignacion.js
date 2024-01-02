@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
+import { Container } from 'react-bootstrap';
 
 const Consignacion = () => {
   const [cuenta, setCuenta] = useState('');
@@ -62,26 +63,36 @@ const Consignacion = () => {
   };
 
   return (
-    <div>
-      <h2>Realizar Consignación</h2>
-      <label>Número de Cuenta:</label>
-      <input type="text" value={cuenta} onChange={(e) => setCuenta(e.target.value)} />
+<Container>
+  <div className="consignacion-container">
+    <h2>Realizar Consignación</h2>
+    <form>
+      <div className="form-group">
+        <label>Número de Cuenta:</label>
+        <input type="text" value={cuenta} onChange={(e) => setCuenta(e.target.value)} />
+      </div>
 
-      <label>Monto:</label>
-      <input type="text" value={monto} onChange={(e) => setMonto(e.target.value)} />
+      <div className="form-group">
+        <label>Monto:</label>
+        <input type="text" value={monto} onChange={(e) => setMonto(e.target.value)} />
+      </div>
 
-      <label>Ciudad:</label>
-      <select value={ciudadId} onChange={(e) => setCiudadId(e.target.value)}>
-        <option value="">Seleccione una ciudad</option>
-        {ciudades.map((ciudad) => (
-          <option key={ciudad.ciudadId} value={ciudad.ciudadId}>
-            {ciudad.nombre}
-          </option>
-        ))}
-      </select>
+      <div className="form-group">
+        <label>Ciudad:</label>
+        <select value={ciudadId} onChange={(e) => setCiudadId(e.target.value)}>
+          <option value="">Seleccione una ciudad</option>
+          {ciudades.map((ciudad) => (
+            <option key={ciudad.ciudadId} value={ciudad.ciudadId}>
+              {ciudad.nombre}
+            </option>
+          ))}
+        </select>
+      </div>
 
       <button onClick={handleConsignar}>Consignar</button>
-    </div>
+    </form>
+  </div>
+</Container>
   );
 };
 
